@@ -9,10 +9,11 @@ Model 2.1 (SAM 2.1):
 
 Changes made to the original files:
 
-  - the "sam2.1_hiera_large" checkpoint was converted from PyTorch to the
-    ONNX format (image encoder and mask decoder) with the exporters that
-    ship with ONNX Runtime;
-  - the image encoder was then passed through ONNX Runtime's basic graph
+  - the "sam2.1_hiera_large" (release v1) and "sam2.1_hiera_small"
+    (release v2) checkpoints were converted from PyTorch to the ONNX format
+    (image encoder and mask decoder) with the exporters that ship with
+    ONNX Runtime;
+  - each image encoder was then passed through ONNX Runtime's basic graph
     optimisation.
 
 The model was not retrained and what it computes is unchanged.
